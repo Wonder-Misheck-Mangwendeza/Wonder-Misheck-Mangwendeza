@@ -1,0 +1,6 @@
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:20px;max-width:900px;margin:0 auto;color:#111}
+.hero{text-align:center;padding:40px 0}
+h1{margin:0;font-size:2rem}
+#project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+.card{border:1px solid #e6e6e6;padding:12px;border-radius:8px}
+.card a{font-weight:600;text-decoration:none}
