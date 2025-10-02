@@ -4,3 +4,4 @@ h1{margin:0;font-size:2rem}
 #project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
 .card{border:1px solid #e6e6e6;padding:12px;border-radius:8px}
 .card a{font-weight:600;text-decoration:none}
+.bold{font-weight:700;margin-bottom:8px;display:block}
