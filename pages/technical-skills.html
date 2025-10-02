@@ -7,51 +7,70 @@
   <meta name="description" content="Technical Skills of Wonder Misheck Mangwendeza" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <link rel="icon" type="image/svg+xml" href="../static/favicon.svg"/>
 </head>
 <body class="bg-gray-100">
-  <header class="bg-blue-600 text-white p-4 shadow-lg animate__animated animate__fadeInDown">
-    <nav class="container mx-auto flex justify-between items-center">
+  <header class="bg-blue-600 text-white p-4 shadow-lg animate__animated animate__fadeInDown fixed top-0 w-full z-50">
+    <nav class="container mx-auto relative flex justify-between items-center">
       <h1 class="text-2xl font-bold">Wonder Misheck Mangwendeza</h1>
-      <ul class="flex space-x-4">
-        <li><a href="../index.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Home</a></li>
-        <li><a href="achievements.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Achievements</a></li>
-        <li><a href="technical-skills.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Technical Skills</a></li>
-        <li><a href="research-interests.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Research Interests</a></li>
-        <li><a href="contact-me.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Contact Me</a></li>
-      </ul>
+      <div class="flex items-center">
+        <ul class="hidden md:flex space-x-4" id="menu">
+          <li><a href="../index.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Home</a></li>
+          <li><a href="achievements.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Achievements</a></li>
+          <li><a href="technical-skills.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Technical Skills</a></li>
+          <li><a href="research-interests.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Research Interests</a></li>
+          <li><a href="contact-me.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Contact Me</a></li>
+        </ul>
+        <button class="md:hidden text-white text-2xl ml-4" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <main class="container mx-auto p-4">
+  <main class="container mx-auto p-4 pt-20">
     <section class="py-16 animate__animated animate__fadeInUp">
       <h1 class="text-4xl font-bold text-center mb-8">🛠️ Technical Skills</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInLeft">
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInLeft text-center">
+          <i class="fas fa-code text-6xl text-blue-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">Programming & Data Analytics</h2>
           <p>Python, R, C#, C++, ASP.NET, Java, PHP, Laravel, React, NestJs, NextJs, Angular, Flutter</p>
         </div>
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInRight">
+        
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInRight text-center">
+          <i class="fas fa-database text-6xl text-green-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">Databases</h2>
           <p>SQL Server, MySQL, MongoDB, SQLite</p>
         </div>
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInUp">
+        
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInUp text-center">
+          <i class="fas fa-chart-bar text-6xl text-purple-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">Data Tools</h2>
           <p>Excel (Advanced), Power BI, Google Data Studio, SQL queries, ETL</p>
         </div>
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInDown">
+        
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInDown text-center">
+          <i class="fas fa-network-wired text-6xl text-red-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">Network & Infrastructure</h2>
           <p>MikroTik Router Management, VPN Configuration</p>
         </div>
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInLeft">
+        
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInLeft text-center">
+          <i class="fas fa-microchip text-6xl text-yellow-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">IoT & Automation</h2>
           <p>Arduino, Sensors, Wireless Modules, AC/DC Relays</p>
         </div>
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInRight">
+        
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInRight text-center">
+          <i class="fas fa-server text-6xl text-indigo-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">Cloud & Systems</h2>
           <p>Windows Server, Linux (Ubuntu), LAMP/XAMPP servers, VPN management</p>
         </div>
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInUp">
+        
+        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInUp text-center">
+          <i class="fas fa-palette text-6xl text-pink-600 mb-4"></i>
           <h2 class="text-2xl font-bold mb-2">UI/UX</h2>
           <p>HTML5, CSS3, JavaScript, Adobe XD, WordPress</p>
         </div>
@@ -71,9 +90,31 @@
       const navLinks = document.querySelectorAll('nav a');
       navLinks.forEach(link => {
         if (link.getAttribute('href') === 'technical-skills.html') {
-          link.classList.add('bg-blue-800');
+          link.classList.add('bg-blue-700');
         }
       });
+    });
+
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function() {
+          if (window.innerWidth < 768) {
+            menu.classList.toggle('absolute');
+            menu.classList.toggle('top-full');
+            menu.classList.toggle('right-0');
+            menu.classList.toggle('w-64');
+            menu.classList.toggle('bg-blue-600');
+            menu.classList.toggle('flex-col');
+            menu.classList.toggle('space-y-2');
+            menu.classList.toggle('p-4');
+            menu.classList.toggle('z-60');
+            menu.classList.toggle('hidden');
+          }
+        });
+      }
     });
   </script>
 </body>
