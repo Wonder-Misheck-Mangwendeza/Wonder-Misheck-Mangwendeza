@@ -11,16 +11,16 @@
   <link rel="icon" type="image/svg+xml" href="static/favicon.svg"/>
 </head>
 <body class="bg-gray-100">
-  <header class="bg-blue-600 text-white p-4 shadow-lg animate__animated animate__fadeInDown fixed top-0 w-full z-50">
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-lg animate__animated animate__fadeInDown fixed top-0 w-full z-50">
     <nav class="container mx-auto relative flex justify-between items-center">
       <h1 class="text-2xl font-bold">Wonder Misheck Mangwendeza</h1>
       <div class="flex items-center">
         <ul class="hidden md:flex space-x-4" id="menu">
-          <li><a href="index.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Home</a></li>
-          <li><a href="pages/achievements.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Achievements</a></li>
-          <li><a href="pages/technical-skills.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Technical Skills</a></li>
-          <li><a href="pages/research-interests.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Research Interests</a></li>
-          <li><a href="pages/contact-me.html" class="hover:bg-blue-700 px-3 py-2 rounded transition duration-300">Contact Me</a></li>
+          <li><a href="index.html" class="hover:bg-purple-700 px-3 py-2 rounded transition duration-300">Home</a></li>
+          <li><a href="pages/achievements.html" class="hover:bg-purple-700 px-3 py-2 rounded transition duration-300">Achievements</a></li>
+          <li><a href="pages/technical-skills.html" class="hover:bg-purple-700 px-3 py-2 rounded transition duration-300">Technical Skills</a></li>
+          <li><a href="pages/research-interests.html" class="hover:bg-purple-700 px-3 py-2 rounded transition duration-300">Research Interests</a></li>
+          <li><a href="pages/contact-me.html" class="hover:bg-purple-700 px-3 py-2 rounded transition duration-300">Contact Me</a></li>
         </ul>
         <button class="md:hidden text-white text-2xl ml-4" id="menu-toggle">
           <i class="fas fa-bars"></i>
@@ -31,12 +31,10 @@
 
   <main class="container mx-auto p-4 pt-20">
     <section class="hero py-8 animate__animated animate__fadeInUp">
-       <!-- Download Resume Button on Far Right -->
-      <div class="mt-8 text-right">
-        <a href="Wonder_Misheck_Mangwendeza_Resume.pdf" download="Wonder_Misheck_Mangwendeza_Resume.pdf" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition animate__animated animate__bounceIn inline-flex items-center">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-          </svg>
+      <!-- Download Resume Button -->
+      <div class="mt-8 text-center md:text-right">
+        <a href="static/Wonder_Misheck_Mangwendeza_Resume.pdf" download="Wonder_Misheck_Mangwendeza_Resume.pdf" class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg transition duration-300 animate__animated animate__bounceIn inline-flex items-center shadow-lg">
+          <i class="fas fa-download mr-2"></i>
           Download Resume
         </a>
       </div>
@@ -55,44 +53,14 @@
           <h2 class="text-3xl font-bold text-center mb-2">🛠️ Technical Skills</h2>
           <div class="relative overflow-hidden rounded-lg shadow-lg min-h-64">
             <div id="skills-carousel" class="flex transition-transform duration-500 ease-in-out h-full">
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-code text-6xl text-blue-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Programming & Data Analytics</h3>
-                <p>Python, R, C#, C++, ASP.NET, Java, PHP, Laravel, React, NestJs, NextJs, Angular, Flutter</p>
-              </div>
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-database text-6xl text-green-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Databases</h3>
-                <p>SQL Server, MySQL, MongoDB, SQLite</p>
-              </div>
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-chart-bar text-6xl text-purple-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Data Tools</h3>
-                <p>Excel (Advanced), Power BI, Google Data Studio, SQL queries, ETL</p>
-              </div>
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-network-wired text-6xl text-red-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Network & Infrastructure</h3>
-                <p>MikroTik Router Management, VPN Configuration</p>
-              </div>
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-microchip text-6xl text-yellow-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">IoT & Automation</h3>
-                <p>Arduino, Sensors, Wireless Modules, AC/DC Relays</p>
-              </div>
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-server text-6xl text-indigo-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Cloud & Systems</h3>
-                <p>Windows Server, Linux (Ubuntu), LAMP/XAMPP servers, VPN management</p>
-              </div>
-              <div class="carousel-slide flex-shrink-0 w-full h-full bg-white flex flex-col items-center justify-center text-center p-6">
-                <i class="fas fa-palette text-6xl text-pink-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">UI/UX</h3>
-                <p>HTML5, CSS3, JavaScript, Adobe XD, WordPress</p>
-              </div>
+              <!-- Slides will be populated by JavaScript -->
             </div>
-            <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-700">‹</button>
-            <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-700">›</button>
+            <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition duration-300 z-10">
+              <i class="fas fa-chevron-left text-white text-xl"></i>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition duration-300 z-10">
+              <i class="fas fa-chevron-right text-white text-xl"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -161,50 +129,103 @@
   </script>
   <script src="list-repos.js"></script>
   <script>
-    // Skills Carousel
-    const carousel = document.getElementById('skills-carousel');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    let currentIndex = 0;
-    let autoSlideInterval;
+    // Skills data
+    const skills = [
+      {
+        icon: 'fas fa-code',
+        title: 'Programming & Data Analytics',
+        description: 'Python, R, C#, C++, ASP.NET, Java, PHP, Laravel, React, NestJs, NextJs, Angular, Flutter'
+      },
+      {
+        icon: 'fas fa-database',
+        title: 'Databases',
+        description: 'SQL Server, MySQL, MongoDB, SQLite'
+      },
+      {
+        icon: 'fas fa-chart-bar',
+        title: 'Data Tools',
+        description: 'Excel (Advanced), Power BI, Google Data Studio, SQL queries, ETL'
+      },
+      {
+        icon: 'fas fa-network-wired',
+        title: 'Network & Infrastructure',
+        description: 'MikroTik Router Management, VPN Configuration'
+      },
+      {
+        icon: 'fas fa-microchip',
+        title: 'IoT & Automation',
+        description: 'Arduino, Sensors, Wireless Modules, AC/DC Relays'
+      },
+      {
+        icon: 'fas fa-server',
+        title: 'Cloud & Systems',
+        description: 'Windows Server, Linux (Ubuntu), LAMP/XAMPP servers, VPN management'
+      },
+      {
+        icon: 'fas fa-palette',
+        title: 'UI/UX',
+        description: 'HTML5, CSS3, JavaScript, Adobe XD, WordPress'
+      }
+    ];
 
-    function updateCarousel() {
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+    // Populate carousel slides
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.getElementById('skills-carousel');
+      skills.forEach(skill => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide flex-shrink-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 text-white flex flex-col items-center justify-center text-center p-6';
+        slide.innerHTML = `
+          <i class="${skill.icon} text-6xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">${skill.title}</h3>
+          <p class="leading-relaxed">${skill.description}</p>
+        `;
+        carousel.appendChild(slide);
+      });
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateCarousel();
-    }
+      // Skills Carousel
+      const slides = document.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      let currentIndex = 0;
+      let autoSlideInterval;
 
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateCarousel();
-    }
+      function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
 
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-    }
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+      }
 
-    function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
-    }
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+      }
 
-    nextBtn.addEventListener('click', () => {
-      stopAutoSlide();
-      nextSlide();
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+      });
+
+      // Start auto-sliding on load
       startAutoSlide();
     });
-
-    prevBtn.addEventListener('click', () => {
-      stopAutoSlide();
-      prevSlide();
-      startAutoSlide();
-    });
-
-    // Start auto-sliding on load
-    startAutoSlide();
   </script>
   <!-- Fathom - beautiful, simple website analytics -->
 <script src="https://cdn.usefathom.com/script.js" data-site="SRDLNUTB" defer></script>

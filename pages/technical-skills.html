@@ -32,48 +32,32 @@
   <main class="container mx-auto p-4 pt-20">
     <section class="py-16 animate__animated animate__fadeInUp">
       <h1 class="text-4xl font-bold text-center mb-8">🛠️ Technical Skills</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInLeft text-center">
-          <i class="fas fa-code text-6xl text-blue-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">Programming & Data Analytics</h2>
-          <p>Python, R, C#, C++, ASP.NET, Java, PHP, Laravel, React, NestJs, NextJs, Angular, Flutter</p>
+      <div class="flex justify-center">
+        <div id="skill-card" class="relative w-full max-w-4xl h-96 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg overflow-hidden flex items-center justify-between p-8 text-white">
+          <!-- Prev Button -->
+          <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition duration-300 z-10">
+            <i class="fas fa-chevron-left text-white text-xl"></i>
+          </button>
+
+          <!-- Skill Content -->
+          <div class="flex-1 text-center px-16">
+            <div id="skill-icon" class="text-6xl mb-4"></div>
+            <h2 id="skill-title" class="text-3xl font-bold mb-4"></h2>
+            <p id="skill-description" class="text-lg leading-relaxed"></p>
+          </div>
+
+          <!-- Next Button -->
+          <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition duration-300 z-10">
+            <i class="fas fa-chevron-right text-white text-xl"></i>
+          </button>
         </div>
-        
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInRight text-center">
-          <i class="fas fa-database text-6xl text-green-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">Databases</h2>
-          <p>SQL Server, MySQL, MongoDB, SQLite</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInUp text-center">
-          <i class="fas fa-chart-bar text-6xl text-purple-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">Data Tools</h2>
-          <p>Excel (Advanced), Power BI, Google Data Studio, SQL queries, ETL</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInDown text-center">
-          <i class="fas fa-network-wired text-6xl text-red-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">Network & Infrastructure</h2>
-          <p>MikroTik Router Management, VPN Configuration</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInLeft text-center">
-          <i class="fas fa-microchip text-6xl text-yellow-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">IoT & Automation</h2>
-          <p>Arduino, Sensors, Wireless Modules, AC/DC Relays</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInRight text-center">
-          <i class="fas fa-server text-6xl text-indigo-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">Cloud & Systems</h2>
-          <p>Windows Server, Linux (Ubuntu), LAMP/XAMPP servers, VPN management</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded shadow animate__animated animate__fadeInUp text-center">
-          <i class="fas fa-palette text-6xl text-pink-600 mb-4"></i>
-          <h2 class="text-2xl font-bold mb-2">UI/UX</h2>
-          <p>HTML5, CSS3, JavaScript, Adobe XD, WordPress</p>
-        </div>
+      </div>
+
+      <!-- Download Button -->
+      <div class="mt-8 text-center md:text-left">
+        <a id="download-btn" href="../static/Wonder_Misheck_Mangwendeza_Resume.pdf" download class="inline-block bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-lg">
+          <i class="fas fa-download mr-2"></i>Download Resume
+        </a>
       </div>
     </section>
   </main>
@@ -85,6 +69,55 @@
     </div>
   </footer>
   <script>
+    // Skills data
+    const skills = [
+      {
+        icon: 'fas fa-code',
+        title: 'Programming & Data Analytics',
+        description: 'Python, R, C#, C++, ASP.NET, Java, PHP, Laravel, React, NestJs, NextJs, Angular, Flutter'
+      },
+      {
+        icon: 'fas fa-database',
+        title: 'Databases',
+        description: 'SQL Server, MySQL, MongoDB, SQLite'
+      },
+      {
+        icon: 'fas fa-chart-bar',
+        title: 'Data Tools',
+        description: 'Excel (Advanced), Power BI, Google Data Studio, SQL queries, ETL'
+      },
+      {
+        icon: 'fas fa-network-wired',
+        title: 'Network & Infrastructure',
+        description: 'MikroTik Router Management, VPN Configuration'
+      },
+      {
+        icon: 'fas fa-microchip',
+        title: 'IoT & Automation',
+        description: 'Arduino, Sensors, Wireless Modules, AC/DC Relays'
+      },
+      {
+        icon: 'fas fa-server',
+        title: 'Cloud & Systems',
+        description: 'Windows Server, Linux (Ubuntu), LAMP/XAMPP servers, VPN management'
+      },
+      {
+        icon: 'fas fa-palette',
+        title: 'UI/UX',
+        description: 'HTML5, CSS3, JavaScript, Adobe XD, WordPress'
+      }
+    ];
+
+    let currentIndex = 0;
+
+    // Function to update the skill card
+    function updateSkillCard() {
+      const skill = skills[currentIndex];
+      document.getElementById('skill-icon').innerHTML = `<i class="${skill.icon}"></i>`;
+      document.getElementById('skill-title').textContent = skill.title;
+      document.getElementById('skill-description').textContent = skill.description;
+    }
+
     // Set active menu item
     document.addEventListener('DOMContentLoaded', function() {
       const navLinks = document.querySelectorAll('nav a');
@@ -92,6 +125,20 @@
         if (link.getAttribute('href') === 'technical-skills.html') {
           link.classList.add('bg-blue-700');
         }
+      });
+
+      // Initialize skill card
+      updateSkillCard();
+
+      // Navigation buttons
+      document.getElementById('prev-btn').addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + skills.length) % skills.length;
+        updateSkillCard();
+      });
+
+      document.getElementById('next-btn').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % skills.length;
+        updateSkillCard();
       });
     });
 
